@@ -54,7 +54,7 @@ def extract_text_from_team_rosters(pdf_path):
     return player_handicaps
 
 # Path to the PDF file
-pdf_path = "/Users/cynical/Documents/GitHub/BowlingHDCPScanner/4950308212024F202401STANDG00.pdf"
+pdf_path = "/Users/cynical/Documents/GitHub/ChristiansburgBowling/4950308212024F202401STANDG00.pdf"
 
 # Extract the text starting from "Team Rosters"
 handicaps = extract_text_from_team_rosters(pdf_path)

@@ -86,8 +86,8 @@ def update_excel(data, excel_path, sheet_name):
     workbook.save(excel_path)
 
 # Paths and worksheet name
-pdf_path = "/Users/cynical/Documents/GitHub/BowlingHDCPScanner/4950308212024F202401STANDG00.pdf"
-excel_path = "/Users/cynical/Documents/GitHub/BowlingHDCPScanner/Wednesday Night Sidepots - MASTER COPY DO NOT EDIT.xlsx"
+pdf_path = "/Users/cynical/Documents/GitHub/ChristiansburgBowling/4950308212024F202401STANDG00.pdf"
+excel_path = "/Users/cynical/Documents/GitHub/ChristiansburgBowling/Wednesday Night Sidepots - MASTER COPY DO NOT EDIT.xlsx"
 sheet_name = "Handicap Bank | WEDNESDAY"
 
 # Extract the handicaps
