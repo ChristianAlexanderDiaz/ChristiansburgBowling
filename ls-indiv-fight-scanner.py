@@ -1,6 +1,7 @@
 import pdfplumber
 import re
 import openpyxl
+from datetime import datetime
 
 def extract_handicaps(pdf_path):
     """
@@ -65,7 +66,7 @@ def extract_handicaps(pdf_path):
 
 def update_excel(data, excel_path, sheet_name):
     """
-    Updates the player data in the specified Excel sheet.
+    Updates the player data in the specified Excel sheet and updates F4 with the last update date.
 
     Args:
     data (list): A list of tuples containing (name, average, handicap).
@@ -82,13 +83,21 @@ def update_excel(data, excel_path, sheet_name):
         sheet[f"B{i}"] = average
         sheet[f"C{i}"] = handicap
 
+    # Get the current date and format it
+    current_date = datetime.now().strftime("%m/%d %I:%M %p")
+
+    # Update cell F4 with the last updated information
+    sheet["F4"] = f"LAST UPDATED: {current_date}"
+
     # Save the workbook
     workbook.save(excel_path)
 
+
+
 # Paths and worksheet name
-pdf_path = "/Users/cynical/Documents/GitHub/ChristiansburgBowling/4950308212024F202401STANDG00.pdf"
-excel_path = "/Users/cynical/Documents/GitHub/ChristiansburgBowling/Wednesday Night Sidepots - MASTER COPY DO NOT EDIT.xlsx"
-sheet_name = "Handicap Bank | WEDNESDAY"
+pdf_path = "/Users/cynical/Documents/GitHub/ChristiansburgBowling/MenWed.pdf"
+excel_path = "/Users/cynical/OneDrive/Mario Kart Wii/Documents/Wednesday Night Sidepots_MacroCopy.xlsx"  # Synced local path
+sheet_name = "Men's Handicap Bank | WEDNESDAY"
 
 # Extract the handicaps
 handicaps = extract_handicaps(pdf_path)
@@ -99,3 +108,5 @@ update_excel(handicaps, excel_path, sheet_name)
 # Optional: Print the results for verification
 for entry in handicaps:
     print(entry)
+    
+print("Reached the end of the script")
