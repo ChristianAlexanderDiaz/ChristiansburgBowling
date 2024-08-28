@@ -23,173 +23,13 @@ function printActiveBowlers(activeList, bowlers) {
 }
 
 /**
- * Calculates the average score from the scoresArray.
+ * Retrieves a list of all bowlers from a column in Excel sheet.
+ * Either Scratch or Handicap sidepot.
  * 
- * @param {Array<number>} scoresArray - An array of scores from which the average is calculated.
- * @returns {number} The calculated average of the scores, rounded to two decimal places.
- */
-function calculateAverage(scoresArray) {
-  // Filter out null values in the array to only consider valid scores
-  const validScores = scoresArray.filter(score => score !== null && !isNaN(score));
-
-  // If there are no valid scores, return 0 as the average
-  if (validScores.length === 0) {
-    return 0;
-  }
-
-  // Calculate the sum of valid scores
-  const sum = validScores.reduce((total, score) => total + parseFloat(score), 0);
-
-  // Calculate and return the average rounded to two decimal places
-  return (sum / validScores.length).toFixed(2);
-}
-
-/**
- * Updates the bowler's average in the Firestore database based on their scoresArray.
- * 
- * @param {string} bowlerId - The ID of the bowler whose average is to be updated.
- * @param {Array<number>} scoresArray - An array of scores from which the average is calculated and updated.
- */
-async function updateBowlerAverage(bowlerId, scoresArray) {
-  // Calculate the new average based on the current scoresArray
-  const newAverage = calculateAverage(scoresArray);
-
-  // Reference to the bowler's document in Firestore
-  const bowlerRef = doc(db, "bowlers", bowlerId);
-
-  try {
-    // Update the average field in Firestore
-    await updateDoc(bowlerRef, {
-      average: newAverage
-    });
-
-    console.log(`Updated average for bowler ${bowlerId}: ${newAverage}`);
-  } catch (error) {
-    console.error("Error updating bowler's average:", error);
-  }
-}
-
-/**
- * Prompts the user to confirm or modify the maxScoreArrayLength.
- * 
- * @param currentLength - The current maxScoreArrayLength found in the database.
- * 
- * @returns A promise that resolves with the confirmed or new maxScoreArrayLength.
- */
-async function promptForMaxScoreArrayLength(currentLength) {
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-
-  return new Promise((resolve) => {
-    rl.question(`maxScoreArrayLength found: ${currentLength}. Is this correct? (yes/no) `, async (answer) => {
-      if (answer.toLowerCase() === 'yes' || answer.toLowerCase() === 'y') {
-        rl.close();
-        resolve(currentLength);
-      } else {
-        rl.question('Please enter the correct maxScoreArrayLength: ', async (newLength) => {
-          const parsedLength = parseInt(newLength, 10);
-          if (isNaN(parsedLength)) {
-            console.log('Invalid input. Keeping the original value.');
-            rl.close();
-            resolve(currentLength);
-          } else {
-            try {
-              // Update the value in Firestore
-              const querySnapshot = await getDocs(collection(db, "variables"));
-              if (!querySnapshot.empty) {
-                const docRef = querySnapshot.docs[0].ref; // Get the reference to the document
-                await updateDoc(docRef, { maxScoreArrayLength: parsedLength });
-                console.log(`maxScoreArrayLength successfully updated to ${parsedLength} in the database.`);
-                rl.close();
-                resolve(parsedLength);
-              } else {
-                console.log("No document found in the 'variables' collection to update.");
-                rl.close();
-                resolve(currentLength);
-              }
-            } catch (error) {
-              console.error("Error updating maxScoreArrayLength in the database: ", error);
-              rl.close();
-              resolve(currentLength); // Resolve with the old value in case of error
-            }
-          }
-        });
-      }
-    });
-  });
-}
-
-/* ------------ GETTERS FROM CLOUD FIRESTORE ------------ */
-
-/**
- * Retrieves a list of all bowlers from the Firestore collection.
- * 
- * @returns array of 'bowlers' with their corresponding IDs and its data
+ * @returns array of 'bowlers' from that column
  */
 async function getCompleteBowlerList() {
-  const querySnapshot = await getDocs(collection(db, "bowlers"));
-  return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-}
-
-/**
- * Retrieves the maxScoreArrayLength from the Firestore collection.
- * 
- * @returns An integer that determines what day it is in the season by multiples of 2.
- * e.g. 2 = 1st day, 4 = 2nd day. Returns null if the document or field does not exist.
- */
-async function getMaxScoreArrayLength() {
-  const querySnapshot = await getDocs(collection(db, "variables"));
-
-  // Since we expect only one document, we can directly access it
-  if (!querySnapshot.empty) {
-    const doc = querySnapshot.docs[0];
-    const data = doc.data();
-
-    if (data.maxScoreArrayLength && typeof data.maxScoreArrayLength === 'number') {
-      console.log("maxScoreArrayLength found:", data.maxScoreArrayLength);
-      return data.maxScoreArrayLength;
-    } else {
-      console.log("maxScoreArrayLength field is missing or not a number.");
-      return null;
-    }
-  } else {
-    console.log("No documents found in 'variables' collection.");
-    return null;
-  }
-}
-
-/**
- * Updates the `maxScoreArrayLength` field in a Firestore document with a new length value.
- * 
- * @param newLength - The new length that you want to set for the
- * `maxScoreArrayLength` field in the document stored in the Firestore database. This function updates
- * the `maxScoreArrayLength` field with the new length provided as the parameter.
- */
-async function updateMaxScoreArrayLength(newLength) {
-  if (typeof newLength !== 'number') {
-    console.error("Invalid newLength value. It must be a number.");
-    return;
-  }
-
-  // Use the same logic to get the document ID correctly
-  const querySnapshot = await getDocs(collection(db, "variables"));
   
-  if (!querySnapshot.empty) {
-    const docRef = querySnapshot.docs[0].ref; // Get the reference to the first (and only) document
-
-    try {
-      await updateDoc(docRef, {
-        maxScoreArrayLength: newLength // Update the value
-      });
-      console.log("Document successfully updated!");
-    } catch (error) {
-      console.error("Error updating document: ", error);
-    }
-  } else {
-    console.log("No document found in the 'variables' collection to update.");
-  }
 }
 
 /**
@@ -258,109 +98,20 @@ async function scrapeData() {
 }
 
 /**
- * Updates the scores of a bowler in a Firestore database.
+ * Updates the scores of a bowler in Excel to their respective column for the set.
  * 
- * @param bowlerId - A unique identifier of the bowler whose scores you want to update in the database.
- * @param newScores - An array of scores that's updated for a specific bowler identified by the `bowlerId`.
+ * @param bowlerName - The bowlers name on screen whose scores you want to update in the database.
+ * @param newScores - An array of scores that's updated for a specific bowler identified by their name.
  */
-async function updateBowlerScores(bowlerId, newScores) {
-  const bowlerRef = doc(db, "bowlers", bowlerId);
-  await updateDoc(bowlerRef, {
-    scores: newScores
-  });
+async function updateBowlerScores(bowlerName, newScores) {
+
 }
 
-/**
- * Adds a new bowler with a given name, optional nicknames, and initializes the average to 0.
- * 
- * @param name - A name of the new bowler being added to the database.
- * @param nicknames - An optional parameter that allows you to provide an array of nicknames 
- * for the bowler being added. If no nicknames are provided, it defaults to an empty array.
- */
-async function addNewBowler(name, nicknames = [], maxScoreArrayLength) {
-  // Initialize the scores array with the appropriate number of nulls
-  const scoresArray = new Array(maxScoreArrayLength - 2).fill(null);
 
-  await addDoc(collection(db, "bowlers"), {
-    name: name,
-    nicknames: nicknames,
-    scores: scoresArray,
-    average: 0
-  });
-  console.log(`Added new bowler: ${name} with nicknames: ${nicknames.join(', ')}`);
+async function updateHandicapSheet(pdf) {
+  
 }
 
-/**
- * Prompts the user to enter the name and nicknames of new bowlers
- * until the user decides to stop adding more. Ensures scores array is initialized based on maxScoreArrayLength.
- * 
- * @param maxScoreArrayLength - The current maxScoreArrayLength that determines the size of the scores array.
- */
-async function promptForNewBowlers(maxScoreArrayLength) {
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-
-  let addMore = true;
-
-  while (addMore) {
-    await new Promise((resolve) => {
-      rl.question('Enter the name of the new bowler (or press Enter to stop adding): ', async (name) => {
-        if (name) {
-          rl.question('Do they have any nicknames? (Separate with commas if multiple): ', async (nicknamesInput) => {
-            const nicknames = nicknamesInput ? nicknamesInput.split(',').map(n => n.trim()) : [];
-            await addNewBowler(name, nicknames, maxScoreArrayLength);
-            resolve();
-          });
-        } else {
-          addMore = false;
-          resolve();
-        }
-      });
-    });
-  }
-
-  rl.close();
-}
-
-/**
- * Takes a name as input, converts it to lowercase, capitalizes the first
- * letter of each word, and returns the normalized name.
- * 
- * @param name - A name as input unchanged.
- * 
- * @returns A normalized name like "chris" -> "Chris".
- */
-function normalizeName(name) {
-  return name
-    .toLowerCase()
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
-
-/**
- * Searches for a bowler by their name or nickname in a given array of bowlers.
- * 
- * @param playerName - A name or nickname of a bowler that you want to
- * search for in the `bowlers` database.
- * @param bowlers - An array of objects representing different bowlers. Each bowler object has
- * properties like `name` (the bowler's name) and `nicknames` (an array of nicknames associated with
- * the bowler).
- * 
- * @returns Returns the bowler object from the `bowlers` array that matches the 
- * normalized `playerName` or any of the normalized nicknames in the bowlers' data.
- */
-function findBowlerByNameOrNickname(playerName, bowlers) {
-  const normalizedPlayerName = normalizeName(playerName);
-
-  // Check if the normalized name matches the bowler's name or any nickname
-  return bowlers.find(bowler => 
-    normalizedPlayerName === bowler.name || 
-    (bowler.nicknames && bowler.nicknames.map(normalizeName).includes(normalizedPlayerName))
-  );
-}
 
 async function main() {
 
