@@ -1,185 +1,363 @@
 [
   {
+    "name": "Jerome Clark",
+    "team": "Top Sargents",
+    "scoresArray": [
+      "116",
+      "108",
+      "114"
+    ],
+    "date": "Today at 3:16 PM"
+  },
+  {
+    "name": "Dan Zeoli",
+    "team": "Dublinites",
+    "scoresArray": [
+      "152",
+      "145",
+      "131"
+    ],
+    "date": "Today at 3:15 PM"
+  },
+  {
+    "name": "Becky Brim",
+    "team": "Top Sargents",
+    "scoresArray": [
+      "114",
+      "99",
+      "127"
+    ],
+    "date": "Today at 3:15 PM"
+  },
+  {
+    "name": "Fred Burroughs",
+    "team": "Stinger Bees",
+    "scoresArray": [
+      "148",
+      "114",
+      "147"
+    ],
+    "date": "Today at 3:14 PM"
+  },
+  {
+    "name": "Bob Turner",
+    "team": "Dublinites",
+    "scoresArray": [
+      "146",
+      "135",
+      "151"
+    ],
+    "date": "Today at 3:13 PM"
+  },
+  {
+    "name": "Jug Donathan",
+    "team": "Hi Toppers",
+    "scoresArray": [
+      "162",
+      "226",
+      "201"
+    ],
+    "date": "Today at 3:13 PM"
+  },
+  {
+    "name": "Reba Smart",
+    "team": "Top Sargents",
+    "scoresArray": [
+      "86",
+      "126",
+      "107"
+    ],
+    "date": "Today at 3:13 PM"
+  },
+  {
+    "name": "Lucille Wilson",
+    "team": "Dublinites",
+    "scoresArray": [
+      "124",
+      "132",
+      "133"
+    ],
+    "date": "Today at 3:11 PM"
+  },
+  {
+    "name": "Polly Myers",
+    "team": "Hi Toppers",
+    "scoresArray": [
+      "150",
+      "141",
+      "143"
+    ],
+    "date": "Today at 3:11 PM"
+  },
+  {
+    "name": "Edward Bucy",
+    "team": "Stinger Bees",
+    "scoresArray": [
+      "130",
+      "156",
+      "121"
+    ],
+    "date": "Today at 3:10 PM"
+  },
+  {
+    "name": "Paul Perdue",
+    "team": "Hi Toppers",
+    "scoresArray": [
+      "127",
+      "160",
+      "170"
+    ],
+    "date": "Today at 3:09 PM"
+  },
+  {
+    "name": "Sharon Turner",
+    "team": "Stinger Bees",
+    "scoresArray": [
+      "121",
+      "97",
+      "134"
+    ],
+    "date": "Today at 3:09 PM"
+  },
+  {
+    "name": "Sylvia Duncan",
+    "team": "Goodtimers",
+    "scoresArray": [
+      "123",
+      "108",
+      "119"
+    ],
+    "date": "Today at 3:07 PM"
+  },
+  {
+    "name": "Bert Hubbard",
+    "team": "Goodtimers",
+    "scoresArray": [
+      "120",
+      "168",
+      "125"
+    ],
+    "date": "Today at 3:05 PM"
+  },
+  {
+    "name": "Jerry Derenthal",
+    "team": "Two Ladies & A G",
+    "scoresArray": [
+      "169",
+      "131",
+      "139"
+    ],
+    "date": "Today at 3:05 PM"
+  },
+  {
+    "name": "Carlene Woolwine",
+    "team": "Goodtimers",
+    "scoresArray": [
+      "111",
+      "80",
+      "96"
+    ],
+    "date": "Today at 3:04 PM"
+  },
+  {
+    "name": "Jeanette Webb",
+    "team": "Two Ladies & A G",
+    "scoresArray": [
+      "135",
+      "124",
+      "124"
+    ],
+    "date": "Today at 3:03 PM"
+  },
+  {
+    "name": "Barbara Newman",
+    "team": "Two Ladies & A G",
+    "scoresArray": [
+      "96",
+      "149",
+      "117"
+    ],
+    "date": "Today at 3:02 PM"
+  },
+  {
+    "name": "J R Riddlebarger",
+    "team": "El Toros",
+    "scoresArray": [
+      "111",
+      "105",
+      "99"
+    ],
+    "date": "Today at 2:48 PM"
+  },
+  {
+    "name": "Donald Melia",
+    "team": "High Rollers",
+    "scoresArray": [
+      "163",
+      "155",
+      "163"
+    ],
+    "date": "Today at 2:47 PM"
+  },
+  {
+    "name": "Rodna Duncan",
+    "team": "El Toros",
+    "scoresArray": [
+      "124",
+      "136",
+      "123"
+    ],
+    "date": "Today at 2:46 PM"
+  },
+  {
+    "name": "Gary Hall",
+    "team": "El Toros",
+    "scoresArray": [
+      "141",
+      "134",
+      "143"
+    ],
+    "date": "Today at 2:45 PM"
+  },
+  {
+    "name": "Arnold Bohanan",
+    "team": "High Rollers",
+    "scoresArray": [
+      "146",
+      "134",
+      "127"
+    ],
+    "date": "Today at 2:45 PM"
+  },
+  {
+    "name": "Vacant",
+    "team": "High Rollers",
+    "scoresArray": [
+      "190",
+      "190",
+      "190"
+    ],
+    "date": "Today at 2:45 PM"
+  },
+  {
+    "name": "Shirley Brown",
+    "team": "High Steppers",
+    "scoresArray": [
+      "92",
+      "107",
+      "101"
+    ],
+    "date": "Today at 2:28 PM"
+  },
+  {
     "name": "Ed Borders",
     "team": "Rusty Nails",
     "scoresArray": [
       "122",
-      "131"
+      "131",
+      "137"
     ],
-    "date": "Today at 1:59 PM"
+    "date": "Today at 2:28 PM"
+  },
+  {
+    "name": "Darrell Bandy",
+    "team": "Down & Outs",
+    "scoresArray": [
+      "165",
+      "165",
+      "165"
+    ],
+    "date": "Today at 2:27 PM"
+  },
+  {
+    "name": "Bill Dalton",
+    "team": "Down & Outs",
+    "scoresArray": [
+      "153",
+      "153",
+      "153"
+    ],
+    "date": "Today at 2:27 PM"
+  },
+  {
+    "name": "Ren Hollandsworth",
+    "team": "Down & Outs",
+    "scoresArray": [
+      "126",
+      "113",
+      "180"
+    ],
+    "date": "Today at 2:27 PM"
   },
   {
     "name": "Alvin Phelps",
     "team": "Rusty Nails",
     "scoresArray": [
       "114",
-      "167"
+      "167",
+      "119"
     ],
-    "date": "Today at 1:57 PM"
+    "date": "Today at 2:27 PM"
   },
   {
     "name": "Liz Craven",
     "team": "Lucky Strikes",
     "scoresArray": [
       "102",
+      "102",
       "102"
     ],
-    "date": "Today at 1:57 PM"
+    "date": "Today at 2:26 PM"
   },
   {
     "name": "Patty Phillips",
     "team": "Lucky Strikes",
     "scoresArray": [
       "113",
-      "114"
+      "114",
+      "115"
     ],
-    "date": "Today at 1:57 PM"
+    "date": "Today at 2:26 PM"
   },
   {
     "name": "Ronnie Adkins",
     "team": "Rusty Nails",
     "scoresArray": [
       "137",
-      "123"
+      "123",
+      "150"
     ],
-    "date": "Today at 1:56 PM"
+    "date": "Today at 2:25 PM"
   },
   {
     "name": "Cecil Sowers",
     "team": "Lucky Strikes",
     "scoresArray": [
       "126",
-      "121"
+      "121",
+      "144"
     ],
-    "date": "Today at 1:56 PM"
+    "date": "Today at 2:25 PM"
   },
   {
-    "name": "Jug Donathan",
-    "team": "Hi Toppers",
+    "name": "Charlotte Alexander",
+    "team": "High Steppers",
     "scoresArray": [
-      "162"
+      "190",
+      "190",
+      "190"
     ],
-    "date": "Today at 1:48 PM"
+    "date": "Today at 2:24 PM"
   },
   {
-    "name": "Fred Burroughs",
-    "team": "Stinger Bees",
+    "name": "Layman Alexander",
+    "team": "High Steppers",
     "scoresArray": [
-      "148"
+      "190",
+      "190",
+      "190"
     ],
-    "date": "Today at 1:47 PM"
-  },
-  {
-    "name": "Dan Zeoli",
-    "team": "Dublinites",
-    "scoresArray": [
-      "152"
-    ],
-    "date": "Today at 1:47 PM"
-  },
-  {
-    "name": "Jerome Clark",
-    "team": "Top Sargents",
-    "scoresArray": [
-      "116"
-    ],
-    "date": "Today at 1:46 PM"
-  },
-  {
-    "name": "Edward Bucy",
-    "team": "Stinger Bees",
-    "scoresArray": [
-      "130"
-    ],
-    "date": "Today at 1:46 PM"
-  },
-  {
-    "name": "Polly Myers",
-    "team": "Hi Toppers",
-    "scoresArray": [
-      "150"
-    ],
-    "date": "Today at 1:45 PM"
-  },
-  {
-    "name": "Bob Turner",
-    "team": "Dublinites",
-    "scoresArray": [
-      "146"
-    ],
-    "date": "Today at 1:45 PM"
-  },
-  {
-    "name": "Becky Brim",
-    "team": "Top Sargents",
-    "scoresArray": [
-      "114"
-    ],
-    "date": "Today at 1:45 PM"
-  },
-  {
-    "name": "Paul Perdue",
-    "team": "Hi Toppers",
-    "scoresArray": [
-      "127"
-    ],
-    "date": "Today at 1:44 PM"
-  },
-  {
-    "name": "Sharon Turner",
-    "team": "Stinger Bees",
-    "scoresArray": [
-      "121"
-    ],
-    "date": "Today at 1:44 PM"
-  },
-  {
-    "name": "Reba Smart",
-    "team": "Top Sargents",
-    "scoresArray": [
-      "86"
-    ],
-    "date": "Today at 1:44 PM"
-  },
-  {
-    "name": "Jerry Derenthal",
-    "team": "Two Ladies & A G",
-    "scoresArray": [
-      "169"
-    ],
-    "date": "Today at 1:43 PM"
-  },
-  {
-    "name": "Lucille Wilson",
-    "team": "Dublinites",
-    "scoresArray": [
-      "124"
-    ],
-    "date": "Today at 1:43 PM"
-  },
-  {
-    "name": "Sylvia Duncan",
-    "team": "Goodtimers",
-    "scoresArray": [
-      "123"
-    ],
-    "date": "Today at 1:42 PM"
-  },
-  {
-    "name": "Jeanette Webb",
-    "team": "Two Ladies & A G",
-    "scoresArray": [
-      "135"
-    ],
-    "date": "Today at 1:41 PM"
-  },
-  {
-    "name": "Bert Hubbard",
-    "team": "Goodtimers",
-    "scoresArray": [
-      "120"
-    ],
-    "date": "Today at 1:41 PM"
+    "date": "Today at 2:24 PM"
   },
   {
     "name": "Evelyn Wilson",
@@ -192,78 +370,6 @@
     "date": "Today at 1:41 PM"
   },
   {
-    "name": "Barbara Newman",
-    "team": "Two Ladies & A G",
-    "scoresArray": [
-      "96"
-    ],
-    "date": "Today at 1:39 PM"
-  },
-  {
-    "name": "Carlene Woolwine",
-    "team": "Goodtimers",
-    "scoresArray": [
-      "111"
-    ],
-    "date": "Today at 1:38 PM"
-  },
-  {
-    "name": "J R Riddlebarger",
-    "team": "El Toros",
-    "scoresArray": [
-      "111"
-    ],
-    "date": "Today at 1:38 PM"
-  },
-  {
-    "name": "Donald Melia",
-    "team": "High Rollers",
-    "scoresArray": [
-      "163"
-    ],
-    "date": "Today at 1:38 PM"
-  },
-  {
-    "name": "Rodna Duncan",
-    "team": "El Toros",
-    "scoresArray": [
-      "124"
-    ],
-    "date": "Today at 1:37 PM"
-  },
-  {
-    "name": "Gary Hall",
-    "team": "El Toros",
-    "scoresArray": [
-      "141"
-    ],
-    "date": "Today at 1:36 PM"
-  },
-  {
-    "name": "Arnold Bohanan",
-    "team": "High Rollers",
-    "scoresArray": [
-      "146"
-    ],
-    "date": "Today at 1:36 PM"
-  },
-  {
-    "name": "Vacant",
-    "team": "High Rollers",
-    "scoresArray": [
-      "190"
-    ],
-    "date": "Today at 1:36 PM"
-  },
-  {
-    "name": "Shirley Brown",
-    "team": "High Steppers",
-    "scoresArray": [
-      "92"
-    ],
-    "date": "Today at 1:35 PM"
-  },
-  {
     "name": "Ty",
     "team": "Team 28",
     "scoresArray": [
@@ -273,30 +379,6 @@
     "date": "Today at 1:35 PM"
   },
   {
-    "name": "Darrell Bandy",
-    "team": "Down & Outs",
-    "scoresArray": [
-      "165"
-    ],
-    "date": "Today at 1:34 PM"
-  },
-  {
-    "name": "Bill Dalton",
-    "team": "Down & Outs",
-    "scoresArray": [
-      "153"
-    ],
-    "date": "Today at 1:34 PM"
-  },
-  {
-    "name": "Ren Hollandsworth",
-    "team": "Down & Outs",
-    "scoresArray": [
-      "126"
-    ],
-    "date": "Today at 1:34 PM"
-  },
-  {
     "name": "Gracie",
     "team": "Team 28",
     "scoresArray": [
@@ -304,22 +386,6 @@
       "70"
     ],
     "date": "Today at 1:33 PM"
-  },
-  {
-    "name": "Charlotte Alexander",
-    "team": "High Steppers",
-    "scoresArray": [
-      "190"
-    ],
-    "date": "Today at 1:31 PM"
-  },
-  {
-    "name": "Layman Alexander",
-    "team": "High Steppers",
-    "scoresArray": [
-      "190"
-    ],
-    "date": "Today at 1:31 PM"
   },
   {
     "name": "Adam",

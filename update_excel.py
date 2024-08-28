@@ -18,11 +18,12 @@ def update_excel_from_json(json_file, excel_file):
                     cell = sheet.cell(row=row, column=4 + i)  # Columns D, E, F
                     if cell.value is None:  # Only write if the cell is empty
                         cell.value = score
+                        print(f"Updated {name} with {score} in {cell.coordinate}")
                         break
                 break
 
     workbook.save(excel_file)
-    print(f"Excel file {excel_file} updated successfully.")
+    # print(f"Excel file {excel_file} updated successfully.")
 
 # Usage
 update_excel_from_json('scraped_data.json', '/Users/cynical/OneDrive/Mario Kart Wii/Documents/Wednesday Night Sidepots_MacroCopy.xlsx')

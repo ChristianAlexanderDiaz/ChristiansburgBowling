@@ -61,6 +61,19 @@ async function main() {
             console.log(`Python script stdout: ${stdout}`);
         });
 
+        // Close and reopen the Excel file using a separate Python script
+        exec('python3 close_reopen_excel.py', (error, stdout, stderr) => {
+            if (error) {
+                console.error(`Error closing and reopening Excel file: ${error.message}`);
+                return;
+            }
+            if (stderr) {
+                console.error(`Close/Reopen script stderr: ${stderr}`);
+                return;
+            }
+            console.log(`Excel file closed and reopened: ${stdout}`);
+        });
+
         console.log(`Cycle ${cycleCount} completed.\n`);
 
         const countdownSeconds = 3;
