@@ -62,7 +62,7 @@ def main():
     print("--------------------")
     
     if active_players:
-        print("Active List:")
+        print("Players on LaneTalk:")
         for player in active_players:
             print(f"- {player}")
         print("--------------------")

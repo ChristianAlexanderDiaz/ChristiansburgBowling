@@ -1,495 +1,486 @@
 [
   {
-    "name": "Jerome Clark",
-    "team": "Top Sargents",
+    "name": "E",
+    "team": "Team 25",
     "scoresArray": [
-      "116",
-      "108",
-      "114"
+      "169"
     ],
-    "date": "Today at 3:16 PM"
+    "date": "Today at 10:56 PM"
   },
   {
-    "name": "Dan Zeoli",
-    "team": "Dublinites",
+    "name": "D",
+    "team": "Team 25",
     "scoresArray": [
-      "152",
-      "145",
-      "131"
+      "192"
     ],
-    "date": "Today at 3:15 PM"
+    "date": "Today at 10:54 PM"
   },
   {
-    "name": "Becky Brim",
-    "team": "Top Sargents",
+    "name": "PLAYER2",
+    "team": "Team 25",
     "scoresArray": [
-      "114",
-      "99",
-      "127"
+      "160"
     ],
-    "date": "Today at 3:15 PM"
+    "date": "Today at 10:53 PM"
   },
   {
-    "name": "Fred Burroughs",
-    "team": "Stinger Bees",
+    "name": "C",
+    "team": "Team 25",
     "scoresArray": [
-      "148",
-      "114",
-      "147"
+      "181"
     ],
-    "date": "Today at 3:14 PM"
+    "date": "Today at 10:52 PM"
   },
   {
-    "name": "Bob Turner",
-    "team": "Dublinites",
+    "name": "PLAYER1",
+    "team": "Team 25",
     "scoresArray": [
-      "146",
-      "135",
-      "151"
+      "183"
     ],
-    "date": "Today at 3:13 PM"
+    "date": "Today at 10:51 PM"
   },
   {
-    "name": "Jug Donathan",
-    "team": "Hi Toppers",
+    "name": "Lyza",
+    "team": "Team 30",
     "scoresArray": [
-      "162",
-      "226",
-      "201"
-    ],
-    "date": "Today at 3:13 PM"
-  },
-  {
-    "name": "Reba Smart",
-    "team": "Top Sargents",
-    "scoresArray": [
-      "86",
-      "126",
-      "107"
-    ],
-    "date": "Today at 3:13 PM"
-  },
-  {
-    "name": "Lucille Wilson",
-    "team": "Dublinites",
-    "scoresArray": [
-      "124",
-      "132",
-      "133"
-    ],
-    "date": "Today at 3:11 PM"
-  },
-  {
-    "name": "Polly Myers",
-    "team": "Hi Toppers",
-    "scoresArray": [
-      "150",
-      "141",
-      "143"
-    ],
-    "date": "Today at 3:11 PM"
-  },
-  {
-    "name": "Edward Bucy",
-    "team": "Stinger Bees",
-    "scoresArray": [
-      "130",
-      "156",
-      "121"
-    ],
-    "date": "Today at 3:10 PM"
-  },
-  {
-    "name": "Paul Perdue",
-    "team": "Hi Toppers",
-    "scoresArray": [
-      "127",
-      "160",
-      "170"
-    ],
-    "date": "Today at 3:09 PM"
-  },
-  {
-    "name": "Sharon Turner",
-    "team": "Stinger Bees",
-    "scoresArray": [
-      "121",
-      "97",
-      "134"
-    ],
-    "date": "Today at 3:09 PM"
-  },
-  {
-    "name": "Sylvia Duncan",
-    "team": "Goodtimers",
-    "scoresArray": [
-      "123",
-      "108",
-      "119"
-    ],
-    "date": "Today at 3:07 PM"
-  },
-  {
-    "name": "Bert Hubbard",
-    "team": "Goodtimers",
-    "scoresArray": [
-      "120",
-      "168",
       "125"
     ],
-    "date": "Today at 3:05 PM"
+    "date": "Today at 10:27 PM"
   },
   {
-    "name": "Jerry Derenthal",
-    "team": "Two Ladies & A G",
+    "name": "Kyler",
+    "team": "Team 30",
     "scoresArray": [
-      "169",
-      "131",
-      "139"
+      "145"
     ],
-    "date": "Today at 3:05 PM"
+    "date": "Today at 10:26 PM"
   },
   {
-    "name": "Carlene Woolwine",
-    "team": "Goodtimers",
+    "name": "Kevin",
+    "team": "Team 30",
     "scoresArray": [
-      "111",
-      "80",
-      "96"
+      "113"
     ],
-    "date": "Today at 3:04 PM"
+    "date": "Today at 10:25 PM"
   },
   {
-    "name": "Jeanette Webb",
-    "team": "Two Ladies & A G",
+    "name": "Rome",
+    "team": "Team 13",
     "scoresArray": [
-      "135",
-      "124",
-      "124"
+      "93",
+      "74",
+      "86"
     ],
-    "date": "Today at 3:03 PM"
+    "date": "Today at 10:24 PM"
   },
   {
-    "name": "Barbara Newman",
-    "team": "Two Ladies & A G",
+    "name": "Kay",
+    "team": "Team 13",
     "scoresArray": [
-      "96",
-      "149",
-      "117"
-    ],
-    "date": "Today at 3:02 PM"
-  },
-  {
-    "name": "J R Riddlebarger",
-    "team": "El Toros",
-    "scoresArray": [
-      "111",
-      "105",
-      "99"
-    ],
-    "date": "Today at 2:48 PM"
-  },
-  {
-    "name": "Donald Melia",
-    "team": "High Rollers",
-    "scoresArray": [
-      "163",
-      "155",
-      "163"
-    ],
-    "date": "Today at 2:47 PM"
-  },
-  {
-    "name": "Rodna Duncan",
-    "team": "El Toros",
-    "scoresArray": [
-      "124",
-      "136",
-      "123"
-    ],
-    "date": "Today at 2:46 PM"
-  },
-  {
-    "name": "Gary Hall",
-    "team": "El Toros",
-    "scoresArray": [
-      "141",
-      "134",
-      "143"
-    ],
-    "date": "Today at 2:45 PM"
-  },
-  {
-    "name": "Arnold Bohanan",
-    "team": "High Rollers",
-    "scoresArray": [
-      "146",
-      "134",
-      "127"
-    ],
-    "date": "Today at 2:45 PM"
-  },
-  {
-    "name": "Vacant",
-    "team": "High Rollers",
-    "scoresArray": [
-      "190",
-      "190",
-      "190"
-    ],
-    "date": "Today at 2:45 PM"
-  },
-  {
-    "name": "Shirley Brown",
-    "team": "High Steppers",
-    "scoresArray": [
-      "92",
-      "107",
-      "101"
-    ],
-    "date": "Today at 2:28 PM"
-  },
-  {
-    "name": "Ed Borders",
-    "team": "Rusty Nails",
-    "scoresArray": [
-      "122",
-      "131",
-      "137"
-    ],
-    "date": "Today at 2:28 PM"
-  },
-  {
-    "name": "Darrell Bandy",
-    "team": "Down & Outs",
-    "scoresArray": [
-      "165",
-      "165",
-      "165"
-    ],
-    "date": "Today at 2:27 PM"
-  },
-  {
-    "name": "Bill Dalton",
-    "team": "Down & Outs",
-    "scoresArray": [
-      "153",
-      "153",
-      "153"
-    ],
-    "date": "Today at 2:27 PM"
-  },
-  {
-    "name": "Ren Hollandsworth",
-    "team": "Down & Outs",
-    "scoresArray": [
-      "126",
-      "113",
-      "180"
-    ],
-    "date": "Today at 2:27 PM"
-  },
-  {
-    "name": "Alvin Phelps",
-    "team": "Rusty Nails",
-    "scoresArray": [
-      "114",
-      "167",
-      "119"
-    ],
-    "date": "Today at 2:27 PM"
-  },
-  {
-    "name": "Liz Craven",
-    "team": "Lucky Strikes",
-    "scoresArray": [
+      "74",
       "102",
-      "102",
-      "102"
+      "85"
     ],
-    "date": "Today at 2:26 PM"
+    "date": "Today at 10:23 PM"
   },
   {
-    "name": "Patty Phillips",
-    "team": "Lucky Strikes",
-    "scoresArray": [
-      "113",
-      "114",
-      "115"
-    ],
-    "date": "Today at 2:26 PM"
-  },
-  {
-    "name": "Ronnie Adkins",
-    "team": "Rusty Nails",
-    "scoresArray": [
-      "137",
-      "123",
-      "150"
-    ],
-    "date": "Today at 2:25 PM"
-  },
-  {
-    "name": "Cecil Sowers",
-    "team": "Lucky Strikes",
-    "scoresArray": [
-      "126",
-      "121",
-      "144"
-    ],
-    "date": "Today at 2:25 PM"
-  },
-  {
-    "name": "Charlotte Alexander",
-    "team": "High Steppers",
-    "scoresArray": [
-      "190",
-      "190",
-      "190"
-    ],
-    "date": "Today at 2:24 PM"
-  },
-  {
-    "name": "Layman Alexander",
-    "team": "High Steppers",
-    "scoresArray": [
-      "190",
-      "190",
-      "190"
-    ],
-    "date": "Today at 2:24 PM"
-  },
-  {
-    "name": "Evelyn Wilson",
-    "team": "Team 15",
-    "scoresArray": [
-      "188",
-      "126",
-      "173"
-    ],
-    "date": "Today at 1:41 PM"
-  },
-  {
-    "name": "Ty",
-    "team": "Team 28",
-    "scoresArray": [
-      "76",
-      "76"
-    ],
-    "date": "Today at 1:35 PM"
-  },
-  {
-    "name": "Gracie",
-    "team": "Team 28",
-    "scoresArray": [
-      "58",
-      "70"
-    ],
-    "date": "Today at 1:33 PM"
-  },
-  {
-    "name": "Adam",
-    "team": "Team 27",
-    "scoresArray": [
-      "133",
-      "101"
-    ],
-    "date": "Today at 1:26 PM"
-  },
-  {
-    "name": "Michelle",
-    "team": "Team 27",
-    "scoresArray": [
-      "86",
-      "95"
-    ],
-    "date": "Today at 1:23 PM"
-  },
-  {
-    "name": "Jf",
-    "scoresArray": [
-      "181",
-      "123",
-      "178",
-      "137"
-    ],
-    "date": "Today at 1:19 PM"
-  },
-  {
-    "name": "Bill",
-    "scoresArray": [
-      "95",
-      "113",
-      "152",
-      "132"
-    ],
-    "date": "Today at 1:08 PM"
-  },
-  {
-    "name": "1",
-    "team": "Team 19",
+    "name": "kc",
+    "team": "Team 13",
     "scoresArray": [
       "100",
-      "75",
-      "110"
+      "91",
+      "95"
     ],
-    "date": "Today at 12:04 PM"
+    "date": "Today at 10:23 PM"
   },
   {
-    "name": "Matt c",
-    "team": "Team 15",
+    "name": "Emoney",
+    "team": "Team 11",
     "scoresArray": [
-      "185",
-      "190",
-      "124"
+      "62",
+      "108",
+      "76"
     ],
-    "date": "Yesterday at 10:54 PM"
+    "date": "Today at 10:22 PM"
   },
   {
-    "name": "Christian",
-    "team": "Team 16",
+    "name": "Ak",
+    "team": "Team 11",
     "scoresArray": [
+      "72",
+      "93",
+      "52"
+    ],
+    "date": "Today at 10:22 PM"
+  },
+  {
+    "name": "ROB HOWELL",
+    "team": "3 FINGERS DEEP",
+    "scoresArray": [
+      "236",
+      "254",
+      "246"
+    ],
+    "date": "Today at 10:08 PM"
+  },
+  {
+    "name": "TODD JONES",
+    "team": "WYTHEVILLE MOOSE",
+    "scoresArray": [
+      "204",
+      "193",
+      "213"
+    ],
+    "date": "Today at 10:07 PM"
+  },
+  {
+    "name": "STEWART BROWN",
+    "team": "3 FINGERS DEEP",
+    "scoresArray": [
+      "258",
       "214",
-      "202",
-      "202"
+      "195"
     ],
-    "date": "Yesterday at 10:54 PM"
+    "date": "Today at 10:06 PM"
   },
   {
-    "name": "Jackson",
-    "team": "Team 15",
+    "name": "PETE WEBSTER",
+    "team": "3 FINGERS DEEP",
     "scoresArray": [
-      "182",
-      "226",
-      "247"
+      "156",
+      "205",
+      "215"
     ],
-    "date": "Yesterday at 10:53 PM"
+    "date": "Today at 10:04 PM"
   },
   {
-    "name": "Danny",
-    "team": "Team 21",
+    "name": "SHAWN ANDERS",
+    "team": "WYTHEVILLE MOOSE",
     "scoresArray": [
-      "152",
+      "278",
+      "218",
+      "205"
+    ],
+    "date": "Today at 10:04 PM"
+  },
+  {
+    "name": "JAMES RAINEY",
+    "team": "HITMEN",
+    "scoresArray": [
+      "219",
+      "163",
+      "214"
+    ],
+    "date": "Today at 10:04 PM"
+  },
+  {
+    "name": "CHRIS EASTRIDGE",
+    "team": "JUVATS",
+    "scoresArray": [
+      "201",
+      "279",
       "178"
     ],
-    "date": "Yesterday at 10:46 PM"
+    "date": "Today at 10:04 PM"
   },
   {
-    "name": "Margaret",
-    "team": "Team 22",
+    "name": "BRIAN GRIFFIN",
+    "team": "3 FINGERS DEEP",
     "scoresArray": [
-      "106",
-      "88"
+      "172",
+      "172",
+      "254"
     ],
-    "date": "Yesterday at 10:46 PM"
+    "date": "Today at 10:03 PM"
   },
   {
-    "name": "Chrispy",
-    "team": "Team 22",
+    "name": "MASON LEE",
+    "team": "HITMEN",
+    "scoresArray": [
+      "208",
+      "188",
+      "254"
+    ],
+    "date": "Today at 10:02 PM"
+  },
+  {
+    "name": "TERRY STIKE",
+    "team": "WYTHEVILLE MOOSE",
+    "scoresArray": [
+      "245",
+      "183",
+      "149"
+    ],
+    "date": "Today at 10:02 PM"
+  },
+  {
+    "name": "CHARLES COLLINS JR.",
+    "team": "JUVATS",
     "scoresArray": [
       "154",
+      "183",
+      "242"
+    ],
+    "date": "Today at 10:02 PM"
+  },
+  {
+    "name": "ANTHONY BILLIPS",
+    "team": "HITMEN",
+    "scoresArray": [
+      "165",
+      "226",
       "144"
     ],
-    "date": "Yesterday at 10:45 PM"
+    "date": "Today at 10:01 PM"
+  },
+  {
+    "name": "DAN BIERTZER",
+    "team": "WYTHEVILLE MOOSE",
+    "scoresArray": [
+      "143",
+      "170",
+      "112"
+    ],
+    "date": "Today at 10:00 PM"
+  },
+  {
+    "name": "ALLEN SUMNER",
+    "team": "JUVATS",
+    "scoresArray": [
+      "223",
+      "165",
+      "158"
+    ],
+    "date": "Today at 10:00 PM"
+  },
+  {
+    "name": "BRANDON BOOTH",
+    "team": "3 FINGERS DEEP",
+    "scoresArray": [
+      "192",
+      "185",
+      "213"
+    ],
+    "date": "Today at 10:00 PM"
+  },
+  {
+    "name": "DANNY LEE",
+    "team": "HITMEN",
+    "scoresArray": [
+      "232",
+      "168",
+      "140"
+    ],
+    "date": "Today at 9:59 PM"
+  },
+  {
+    "name": "CHRISTIAN DIAZ",
+    "team": "WYTHEVILLE MOOSE",
+    "scoresArray": [
+      "233",
+      "217",
+      "180"
+    ],
+    "date": "Today at 9:59 PM"
+  },
+  {
+    "name": "LEE MARSHALL",
+    "team": "JUVATS",
+    "scoresArray": [
+      "176",
+      "151",
+      "167"
+    ],
+    "date": "Today at 9:59 PM"
+  },
+  {
+    "name": "BUCK WADE",
+    "team": "HITMEN",
+    "scoresArray": [
+      "210",
+      "143",
+      "195"
+    ],
+    "date": "Today at 9:58 PM"
+  },
+  {
+    "name": "TRAVIS FOUTZ",
+    "team": "JUVATS",
+    "scoresArray": [
+      "196",
+      "172",
+      "222"
+    ],
+    "date": "Today at 9:57 PM"
+  },
+  {
+    "name": "ANTHONY WHITE",
+    "team": "ANY WAY THEY FAL",
+    "scoresArray": [
+      "233",
+      "172",
+      "184"
+    ],
+    "date": "Today at 9:56 PM"
+  },
+  {
+    "name": "TROY HURST",
+    "team": "WE DON'T GIVE A",
+    "scoresArray": [
+      "225",
+      "131",
+      "181"
+    ],
+    "date": "Today at 9:56 PM"
+  },
+  {
+    "name": "DYLAN LINKOUS",
+    "team": "RHYNO'S PRO SHOP",
+    "scoresArray": [
+      "179",
+      "204",
+      "205"
+    ],
+    "date": "Today at 9:56 PM"
+  },
+  {
+    "name": "DAVID WADE",
+    "team": "ANY WAY THEY FAL",
+    "scoresArray": [
+      "234",
+      "224",
+      "233"
+    ],
+    "date": "Today at 9:55 PM"
+  },
+  {
+    "name": "TYLER GRAHAM",
+    "team": "RHYNO'S PRO SHOP",
+    "scoresArray": [
+      "289",
+      "226",
+      "191"
+    ],
+    "date": "Today at 9:55 PM"
+  },
+  {
+    "name": "JEFF STCLAIR",
+    "team": "WE DON'T GIVE A",
+    "scoresArray": [
+      "191",
+      "234",
+      "205"
+    ],
+    "date": "Today at 9:54 PM"
+  },
+  {
+    "name": "TYLER MORGAN",
+    "team": "RHYNO'S PRO SHOP",
+    "scoresArray": [
+      "185",
+      "201",
+      "163"
+    ],
+    "date": "Today at 9:52 PM"
+  },
+  {
+    "name": "LUKE LISKA",
+    "team": "WE DON'T GIVE A",
+    "scoresArray": [
+      "192",
+      "202",
+      "158"
+    ],
+    "date": "Today at 9:52 PM"
+  },
+  {
+    "name": "MIKE PHILLIPS",
+    "team": "RHYNO'S PRO SHOP",
+    "scoresArray": [
+      "161",
+      "192",
+      "154"
+    ],
+    "date": "Today at 9:50 PM"
+  },
+  {
+    "name": "CHRIS SYMANOSKIE",
+    "team": "WE DON'T GIVE A",
+    "scoresArray": [
+      "115",
+      "147",
+      "136"
+    ],
+    "date": "Today at 9:50 PM"
+  },
+  {
+    "name": "GLEN LINKOUS",
+    "team": "ANY WAY THEY FAL",
+    "scoresArray": [
+      "156",
+      "162",
+      "193"
+    ],
+    "date": "Today at 9:50 PM"
+  },
+  {
+    "name": "JACOB RATCLIFF",
+    "team": "RHYNO'S PRO SHOP",
+    "scoresArray": [
+      "200",
+      "196",
+      "212"
+    ],
+    "date": "Today at 9:49 PM"
+  },
+  {
+    "name": "AUSTIN TAYLOR",
+    "team": "WE DON'T GIVE A",
+    "scoresArray": [
+      "106",
+      "112",
+      "95"
+    ],
+    "date": "Today at 9:47 PM"
+  },
+  {
+    "name": "Larry Doss",
+    "team": "LARRY DOSS",
+    "scoresArray": [
+      "183",
+      "135",
+      "255"
+    ],
+    "date": "Today at 9:46 PM"
+  },
+  {
+    "name": "NICHOLAS NEEL",
+    "team": "ANY WAY THEY FAL",
+    "scoresArray": [
+      "189",
+      "184",
+      "216"
+    ],
+    "date": "Today at 9:44 PM"
+  },
+  {
+    "name": "NAT KESLING",
+    "team": "EPR",
+    "scoresArray": [
+      "196",
+      "208",
+      "224"
+    ],
+    "date": "Today at 9:42 PM"
+  },
+  {
+    "name": "Richard Fairley",
+    "team": "HORTON NATION",
+    "scoresArray": [
+      "195",
+      "266",
+      "219"
+    ],
+    "date": "Today at 9:42 PM"
   }
 ]

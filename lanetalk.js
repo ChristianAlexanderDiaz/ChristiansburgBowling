@@ -41,22 +41,19 @@ async function scrapeData() {
     }
 }
 
-function getActiveBowlers(excelFile, seenBowlers) {
+function getActiveListFromExcel(excelFile) {
     const workbook = XLSX.readFile(excelFile);
     const sheet = workbook.Sheets["Handicap Sidepot"];
 
     const activeList = [];
     for (let row = 2; row <= 51; row++) {
         const nameCell = sheet[`B${row}`] ? sheet[`B${row}`].v : null;
-        if (nameCell && seenBowlers.includes(nameCell)) { // Only track bowlers who have been seen before
-            const scores = [
-                sheet[`D${row}`] ? sheet[`D${row}`].v : null,
-                sheet[`E${row}`] ? sheet[`E${row}`].v : null,
-                sheet[`F${row}`] ? sheet[`F${row}`].v : null
-            ];
-            if (scores.filter(Boolean).length < 3) {
-                activeList.push(nameCell);
-            }
+        const firstGame = sheet[`D${row}`] ? sheet[`D${row}`].v : null;
+        const thirdGame = sheet[`F${row}`] ? sheet[`F${row}`].v : null;
+
+        if (nameCell && firstGame && !thirdGame) {
+            // The bowler has started (has at least one score) but hasn't finished (missing third game)
+            activeList.push(nameCell);
         }
     }
     return activeList;
@@ -65,52 +62,51 @@ function getActiveBowlers(excelFile, seenBowlers) {
 async function main() {
     const excelFile = '/Users/cynical/OneDrive/Mario Kart Wii/Documents/Wednesday Night Sidepots_MacroCopy.xlsx';
     let cycleCount = 0;
-    let seenBowlers = []; // List of bowlers who have been seen before
-    let activeList = [];
     let hasProcessedAtLeastOnceActiveBowler = false;
+    let activeList = []; // Declare activeList outside the try block
 
     while (true) {
         cycleCount++;
         console.log("--------------------");
         console.log(`Logic:\nStarting cycle ${cycleCount}...`);
 
-        const scrapedData = await scrapeData(); // Scrape and save the data to JSON
+        await scrapeData();  // Scrape and save the data to JSON
 
-        if (scrapedData) {
-            // Update seenBowlers list with current scraped data
-            scrapedData.forEach(player => {
-                if (!seenBowlers.includes(player.name)) {
-                    seenBowlers.push(player.name);
-                }
-            });
+        console.log(`Cycle ${cycleCount} completed.`);
+        console.log("--------------------");
 
-            console.log(`Cycle ${cycleCount} completed.`);
+        // Execute the Python script synchronously
+        try {
+            const pythonOutput = execSync('python3 /Users/cynical/Documents/GitHub/ChristiansburgBowling/update_excel.py').toString();
+            // Split the output to differentiate between updates and active list
+            const outputSections = pythonOutput.split("--------------------");
+            const excelUpdates = outputSections[1]?.trim() || "No updates.";
+            const activeListOutput = outputSections[2]?.trim() || "No active bowlers left.";
+
+            console.log("\n--------------------");
+            console.log(`${excelUpdates}`);
+            console.log("--------------------\n");
+
             console.log("--------------------");
+            console.log(`${activeListOutput}`);
+            console.log("--------------------\n");
 
-            // Execute the Python script synchronously
-            try {
-                const pythonOutput = execSync('python3 /Users/cynical/Documents/GitHub/ChristiansburgBowling/update_excel.py').toString();
-                // Split the output to differentiate between updates and active list
-                const outputSections = pythonOutput.split("--------------------");
-                const excelUpdates = outputSections[1]?.trim() || "No updates.";
-                const activeListOutput = outputSections[2]?.trim() || "No active bowlers left.";
+            // Update activeList directly from the Excel data
+            activeList = getActiveListFromExcel(excelFile);
+            if (activeList.length > 0) {
+                hasProcessedAtLeastOnceActiveBowler = true;
 
-                console.log("\n--------------------");
-                console.log(`${excelUpdates}`);
+                console.log("Active List:");
+                activeList.forEach(bowler => {
+                    console.log(`- ${bowler}`);
+                });
                 console.log("--------------------\n");
-
-                console.log("--------------------");
-                console.log(`${activeListOutput}`);
-                console.log("--------------------\n");
-
-                // Update activeList based on new Excel data and seen bowlers
-                activeList = getActiveBowlers(excelFile, seenBowlers);
-                if (activeList.length > 0) {
-                    hasProcessedAtLeastOnceActiveBowler = true;
-                }
-            } catch (error) {
-                console.error(`Error executing Python script: ${error.message}`);
             }
+
+        } catch (error) {
+            console.error(`Error executing Python script: ${error.message}`);
+            // Handle case where activeList might not be set if an error occurs
+            activeList = []; 
         }
 
         if (activeList.length > 0) {
