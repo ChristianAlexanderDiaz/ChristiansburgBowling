@@ -29,7 +29,7 @@ def update_excel_from_json(json_file, excel_file):
                 for i, score in enumerate(scores):
                     cell = sheet.cell(row=row, column=4 + i)  # Calculate the correct column (D, E, F)
                     if cell.value is None:  # Only update the cell if it's empty
-                        cell.value = score
+                        cell.value = int(score)  # Convert the score to an integer
                         game = game_map.get(i, "unknown")  # Get the game number (first, second, third)
                         updated_players.append(f"{name} finished their {game} game with a {score}.")
                         break  # Exit the loop once the score is added
