@@ -18,7 +18,7 @@ def process_line_for_players(line):
     for match in matches:
         name = match[0].strip()
         average = match[1].strip()
-        handicap = match[2].strip()
+        handicap = int(match[2].strip())
         player_handicaps.append((name, average, handicap))
     
     return player_handicaps
@@ -65,7 +65,10 @@ def update_excel(data, excel_path, sheet_name):
     sheet_name (str): The name of the worksheet to update.
     """
     # Load the workbook and select the specified worksheet
-    workbook = openpyxl.load_workbook(excel_path)
+    workbook = openpyxl.load_workbook(excel_path, keep_vba=True)
+    
+    # Print all available sheet names
+    print("Available sheets:", workbook.sheetnames)
     sheet = workbook[sheet_name]
 
     # Write the data to the sheet starting at A2
@@ -86,7 +89,7 @@ def update_excel(data, excel_path, sheet_name):
 
 # Path to the PDF file
 pdf_path = "/Users/cynical/Documents/GitHub/ChristiansburgBowling/OpenWed.pdf"
-excel_path = "/Users/cynical/OneDrive/Mario Kart Wii/Documents/Wednesday Night Sidepots_MacroCopy.xlsx"  # Synced local path
+excel_path = "/Users/cynical/OneDrive/Documents/Wednesday Night Sidepots_MacroCopy.xlsm"  # Synced local path
 sheet_name = "Open Handicap Bank | WEDNESDAY"
 
 

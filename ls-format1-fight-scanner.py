@@ -1,12 +1,26 @@
 import pdfplumber
 import re
 import openpyxl
-import gspread
 from datetime import datetime
-from oauth2client.service_account import ServiceAccountCredentials
 
-# Path to the JSON key file you just downloaded
-json_keyfile_path = "/Users/cynical/Documents/GitHub/ChristiansburgBowling/its-gametime-at-the-superbowl-5f69e9b89124.json"
+# Create an exceptions list as a dictionary with NO middle iniitials
+name_exceptions = {
+    "CHRISTOPHER C. EASTRIDGE": "CHRIS EASTRIDGE",
+    "RONNIE DUNCAN": "Ronnie Duncan"
+}
+
+def remove_middle_initial(name):
+    """
+    Removes the middle initial from a name if it exists
+    while maintaining Jr., Sr., etc. suffixes.
+
+    Args:
+    name (str): The name to process.
+
+    Returns:
+    str: The name without the middle initial.
+    """
+    return re.sub(r"\s+[A-Z]\.\s+", " ", name)
 
 def extract_handicaps(pdf_path):
     """
@@ -59,7 +73,14 @@ def extract_handicaps(pdf_path):
                         if match:
                             name = match.group(1).strip()
                             average = match.group(2).strip()
-                            handicap = match.group(3).strip()
+                            handicap = int(match.group(3).strip())
+                            
+                            # Handle name exceptions if PDF differs from bowling screen
+                            if name in name_exceptions:
+                                name = name_exceptions[name]
+                            else:
+                                # Remove the middle initial from the name
+                                name = remove_middle_initial(name)
                             player_handicaps.append((name, average, handicap))
 
             # Increment the page number counter after processing each page
@@ -69,46 +90,54 @@ def extract_handicaps(pdf_path):
     player_handicaps.sort(key=lambda x: x[0])  # Sort by name
     return player_handicaps
 
-def update_google_sheet(handicaps, sheet_name):
+def update_excel(data, excel_path, sheet_name):
     """
-    Updates the player data in the specified Google Sheet.
+    Updates the player data in the specified Excel sheet and updates F4 with the last update date.
 
     Args:
     data (list): A list of tuples containing (name, average, handicap).
+    excel_path (str): The file path to the Excel document.
     sheet_name (str): The name of the worksheet to update.
     """
-    # Define the scope and authenticate with the Google Sheets API
-    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name(json_keyfile_path, scope)
-    client = gspread.authorize(creds)
-    
-    google_sheet_name = "Wednesday Bowling League"
+    # Load the workbook and select the specified worksheet
+    workbook = openpyxl.load_workbook(excel_path, keep_vba=True)
+        
+    # Print all available sheet names
+    print("Available sheets:", workbook.sheetnames)
 
-    # Open the Google Sheet by name
-    sheet = client.open(google_sheet_name).worksheet(sheet_name)
+    # Ensure you use the correct sheet name
+    if sheet_name in workbook.sheetnames:
+        sheet = workbook[sheet_name]
+    else:
+        print(f"Sheet '{sheet_name}' does not exist.")
+        # Handle the error as necessary
 
-    # Update the data in the sheet starting at row 2
-    for i, (name, average, handicap) in enumerate(handicaps, start=2):
-        sheet.update_cell(i, 1, name)
-        sheet.update_cell(i, 2, average)
-        sheet.update_cell(i, 3, handicap)
+    # Write the data to the sheet starting at A2
+    for i, (name, average, handicap) in enumerate(data, start=2):
+        sheet[f"A{i}"] = name
+        sheet[f"B{i}"] = average
+        sheet[f"C{i}"] = handicap
 
     # Get the current date and format it
-    current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    current_date = datetime.now().strftime("%m/%d %I:%M %p")
 
-    # Update the "last updated" cell, let's say F4
-    sheet.update_acell("F4", f"LAST UPDATED: {current_date} by the Code")
+    # Update cell F4 with the last updated information
+    sheet["F4"] = f"LAST UPDATED: {current_date}"
+
+    # Save the workbook
+    workbook.save(excel_path)
+
 
 # Paths and worksheet name
 pdf_path = "/Users/cynical/Documents/GitHub/ChristiansburgBowling/MenWed.pdf"
-excel_path = "/Users/cynical/OneDrive/Mario Kart Wii/Documents/Wednesday Night Sidepots_MacroCopy.xlsx"  # Synced local path
+excel_path = "/Users/cynical/OneDrive/Documents/Wednesday Night Sidepots_MacroCopy.xlsm"  # Synced local path
 sheet_name = "Men's Handicap Bank | WEDNESDAY"
 
 # Extract the handicaps
 handicaps = extract_handicaps(pdf_path)
 
 # Call the function with your data and worksheet name
-update_google_sheet(handicaps, sheet_name);
+update_excel(handicaps, excel_path, sheet_name)
 
 # Optional: Print the results for verification
 for entry in handicaps:

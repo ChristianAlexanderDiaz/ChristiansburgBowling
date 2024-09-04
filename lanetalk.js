@@ -60,7 +60,7 @@ function getActiveListFromExcel(excelFile) {
 }
 
 async function main() {
-    const excelFile = '/Users/cynical/OneDrive/Mario Kart Wii/Documents/Wednesday Night Sidepots_MacroCopy.xlsx';
+    const excelFile = '/Users/cynical/OneDrive/Documents/Wednesday Night Sidepots_MacroCopy.xlsm';
     let cycleCount = 0;
     let hasProcessedAtLeastOnceActiveBowler = false;
     let activeList = []; // Declare activeList outside the try block
